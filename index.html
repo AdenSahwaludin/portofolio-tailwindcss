@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Tailwind CSS</title>
+  <link href="dist/css/final.css" rel="stylesheet" />
+  <!-- Dark mode -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    * {
+	transition: background-color 5s ease-in-out,
+		color  10s !important;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header Start -->
+  <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+    <div class="container">
+      <div class="relative flex items-center justify-between">
+        <div class="px-4">
+          <a href="#home"
+            class="block py-6 text-lg font-bold bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent md:from-5%">adensahwaludin</a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+            <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+          </button>
+
+          <nav id="nav-menu"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+            <ul class="block lg:flex">
+              <li class="group">
+                <a href="#home"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+              </li>
+              <li class="group">
+                <a href="#about"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Tentang Saya</a>
+              </li>
+              <li class="group">
+                <a href="#portfolio"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+              </li>
+              <li class="group">
+                <a href="#clients"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Clients</a>
+              </li>
+              <li class="group">
+                <a href="#blog"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
+              </li>
+              <li class="group">
+                <a href="#contact"
+                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+              </li>
+              <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                <div class="flex">
+                  <span class="mr-2 text-sm text-slate-500">light</span>
+                  <input type="checkbox" class="hidden" id="dark-toggle" />
+                  <label for="dark-toggle">
+                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                      </div>
+                    </div>
+                  </label>
+                  <span class="ml-2 text-sm text-slate-500">dark</span>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <!-- Hero Section Start -->
+  <section id="home" class="md:pt-36 lg:pt-36 xl:pt-36 2xl:pt-36 pt-24 dark:bg-dark">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-full self-center px-4 lg:w-1/2">
+          <h1
+            class="text-base font-semibold bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent md:from-5% md:text-xl">
+            Halo Semua,<span class="wavingHand text-white">👋</span>
+            saya
+            <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Aden Sahwaludin</span>
+          </h1>
+
+          <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">Student & <span
+              class="text-dark dark:text-white"> Front End Developer</span>
+          </h2>
+
+          <p class="mb-10 font-medium leading-relaxed text-secondary">Akumah masih pemula, ajarin dong puh sepuh. Tingky
+            Wingky Dipsy Lala puh <a href="#" class="font-bold text-dark dark:text-white"
+              onclick="playAudio()">sepuuuuuhhhhh</a>
+          </p>
+          <audio id="song">
+            <source src="dist/audio/sepuhhh.mp3" type="audio/mp3" />
+          </audio>
+          <a href="#about"
+            class="rounded-full bg-gradient-to-r from-primary from-5% to-emerald-500 to-90% py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi
+            Saya</a>
+        </div>
+        <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="relative mt-10 lg:right-0 lg:mt-9">
+            <img src="dist/img/svgbndung.png" alt="Aden Sahwaludin" class="relative z-10 mx-auto max-w-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section End -->
+
+  <!-- About Section Start -->
+  <section id="about" class="pt-36 pb-32 dark:bg-dark">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="mb-10 w-full px-4 lg:w-1/2">
+          <h4
+            class="mb-3 text-lg font-bold uppercase bg-gradient-to-r from-primary from-5% to-emerald-500 to-90% bg-clip-text text-transparent">
+            Tentang Saya</h4>
+          <h2 class="mb-2 mr-4 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Mahasiswa Universitas
+            Teknologi Yogyakarta | Fakultas Komputer <span
+              class="bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent from-5%">Sistem
+              Informasi</span></h2>
+          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Saya sangat antusias dalam mempelajari
+            teknologi dan informatika, dan selalu bersemangat untuk mengejar pengetahuan baru.</p>
+        </div>
+        <div class="w-full px-4 lg:w-1/2">
+          <h3 class="mb-2 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Mari berteman</h3>
+          <p class="text-base font-medium text-secondary lg:text-lg">
+            Anda bisa mengikuti perkembangan saya dan berinteraksi dengan saya melalui berbagai platform media sosial
+            berikut:
+          </p>
+          <div class="flex flex-wrap items-center">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281292596948" target="_blank"
+              class="mt-3 mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>WhatsApp</title>
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/_adeen.s" target="_blank"
+              class="mt-3 mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+              </svg>
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/AdenSahwaludin7" target="_blank"
+              class="mt-3 mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Twitter</title>
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@A1270" target="_blank"
+              class="mt-3 mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/aden-sahwaludin-250875217/" target="_blank"
+              class="mt-3 mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section End -->
+
+  <!-- Portfolio Section Start -->
+  <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 max-w-xl text-center">
+          <h4
+            class="mb-2 text-lg font-semibold bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent from-5%">
+            Portfolio</h4>
+          <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Project Terbaru</h2>
+          <p class="text-md font-medium text-secondary md:text-lg">
+            Kami dengan bangga mempersembahkan proyek-proyek terbaru kami yang memukau dan inovatif. Lihatlah hasil
+            karya kami di bawah ini!
+          </p>
+        </div>
+      </div>
+
+      <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="overflow-hidden rounded-md shadow-md">
+            <img src="dist/img/portfolio/1.png" alt="Landing Page" width="w-full" />
+          </div>
+          <a href="https://adensahwaludin.github.io/portofolio" target="_blank"
+            class="block mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Landing Page</a>
+          <p class="text-base font-medium text-secondary">Kami telah merancang dan mengembangkan halaman utama yang
+            menarik dan responsif. Lihat lebih lanjut tentang proyek ini.</p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="overflow-hidden rounded-md shadow-md">
+            <img src="dist/img/portfolio/2.png" alt="Wedding Invitation" width="w-full" />
+          </div>
+          <a href="https://adensahwaludin.github.io" target="_blank"
+            class="block mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Wedding Invitation</a>
+          <p class="text-base font-medium text-secondary">Proyek undangan pernikahan kami menghadirkan desain yang
+            elegan dan kreatif. Temukan lebih lanjut tentang proyek ini.</p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="overflow-hidden rounded-md shadow-md">
+            <img src="dist/img/portfolio/3.png" alt="Portofolio" width="w-full" />
+          </div>
+          <a href="#" class="block mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Portofolio Tailwind
+            CSS</a>
+          <p class="text-base font-medium text-secondary">Kami telah membuat portofolio menggunakan Tailwind CSS yang
+            modern dan menarik. Pelajari lebih lanjut tentang proyek ini.</p>
+        </div>
+        <div class="mb-12 p-4 md:w-1/2">
+          <div class="overflow-hidden rounded-md shadow-md">
+            <img src="dist/img/portfolio/4.png" alt="Tribute Page" width="w-full" />
+          </div>
+          <a href="#" data-blog-id="1"
+            class="block mt-5 mb-3 text-xl font-semibold text-dark dark:text-white alertlink">Kopi
+            Kenangan
+            Senja</a>
+          <p class="text-base font-medium text-secondary">Proyek kami tentang kopi kenangan senja akan membawa Anda ke
+            dunia kopi yang hangat dan menghibur. Temukan lebih lanjut tentang proyek ini.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section End -->
+
+  <!-- Clients Section Start -->
+  <section id="clients" class="bg-slate-800 pt-36 pb-32 dark:bg-slate-300">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 text-center">
+          <h4
+            class="mb-2 text-lg font-semibold bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent from-5%">
+            Clients</h4>
+          <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">Yang Pernah Bekerjasama
+          </h2>
+          <p class="text-md font-medium text-secondary md:text-lg">Berikut adalah beberapa perusahaan yang pernah
+            bekerja sama dengan kami:</p>
+        </div>
+      </div>
+
+      <div class="w-full px-4">
+        <div class="flex flex-wrap items-center justify-center">
+          <a href="https://www.google.com" target="_blank"
+            class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+            <img src="dist/img/clients/google.svg" alt="Google" />
+          </a>
+          <a href="https://www.gojek.com" target="_blank"
+            class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+            <img src="dist/img/clients/gojek.svg" alt="Gojek" />
+          </a>
+          <a href="https://www.tokopedia.com" target="_blank"
+            class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+            <img src="dist/img/clients/tokopedia.svg" alt="Tokopedia" />
+          </a>
+          <a href="https://www.traveloka.com" target="_blank"
+            class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+            <img src="dist/img/clients/traveloka.svg" alt="traveloka" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Clients Section End -->
+
+  <!-- Blog Section Start -->
+  <section id="blog" class="bg-slate-100 pt-36 pb-32 dark:bg-dark">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 max-w-xl text-center">
+          <h4
+            class="mb-2 text-lg font-semibold bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent from-5%">
+            Blog</h4>
+          <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Tulisan Terkini</h2>
+          <p class="text-md font-medium text-secondary md:text-lg">Selamat datang di blog kami. Di sini, kami berbagi
+            berbagai informasi terbaru dan menarik seputar topik yang Anda
+            minati. Terus ikuti untuk mendapatkan wawasan terbaru.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap place-content-center">
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+            <img src="https://source.unsplash.com/360x200?Programming" alt="Programming" class="w-full" />
+            <div class="py-8 px-6">
+              <h3>
+                <a href="#" data-blog-id="1"
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Tips
+                  Belajar Programming</a>
+              </h3>
+              <p class="mb-6 text-base font-medium text-secondary">Belajar pemrograman adalah langkah penting untuk
+                mengembangkan keterampilan teknis Anda. Namun, prosesnya mungkin tampak
+                rumit pada awalnya.</p>
+              <a href="#" data-blog-id="1"
+                class="rounded-lg bg-gradient-to-r from-primary from-5% to-emerald-500 py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca
+                Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+            <img src="https://source.unsplash.com/360x200?Mechanical+Keyboard" alt="Mechanical Keyboard"
+              class="w-full" />
+            <div class="py-8 px-6">
+              <h3>
+                <a href="#" data-blog-id="1"
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Review
+                  Keyboard GMMK Pro</a>
+              </h3>
+              <p class="mb-6 text-base font-medium text-secondary">Belajar pemrograman adalah langkah penting untuk
+                mengembangkan keterampilan teknis Anda. Namun, prosesnya mungkin tampak
+                rumit pada awalnya.</p>
+              <a href="#" data-blog-id="1"
+                class="rounded-lg bg-gradient-to-r from-primary from-5% to-emerald-500 py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca
+                Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+          <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+            <img src="dist/img/blog/medium.com.png" alt="Medium.com" class="w-full" />
+            <div class="py-8 px-6">
+              <h3>
+                <a href="https://medium.com/@sekha1211/pengalaman-mengikuti-program-devhandal-dan-tersertifikasi-certified-developer-dari-alibaba-cloud-260101da5354"
+                  target="_blank"
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Program
+                  DevHandal</a>
+              </h3>
+              <p class="mb-6 text-base font-medium text-secondary">Jelajahi blog terbaru saya yang menceritakan
+                pengalaman mengikuti program DevHandal dan tersertifikasi certified developer dari Alibaba Cloud
+              </p>
+              <a href="https://medium.com/@sekha1211/pengalaman-mengikuti-program-devhandal-dan-tersertifikasi-certified-developer-dari-alibaba-cloud-260101da5354"
+                target="_blank"
+                class="rounded-lg bg-gradient-to-r from-primary from-5% to-emerald-500 py-2 px-4 text-sm font-medium text-white hover:opacity-80">Baca
+                Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Blog Section End -->
+
+  <!-- Contact Section Start -->
+  <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 max-w-xl text-center">
+          <h4
+            class="mb-2 text-lg font-semibold bg-gradient-to-r from-primary from-5% to-emerald-500 bg-clip-text text-transparent">
+            Contact</h4>
+          <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
+          <p class="text-md font-medium text-secondary md:text-lg">Silakan beri tahu kami jika Anda memiliki pertanyaan,
+            komentar, atau permintaan. Kami akan senang mendengar dari Anda.</p>
+        </div>
+      </div>
+
+      <form>
+        <div class="w-full lg:mx-auto lg:w-2/3">
+          <div class="mb-8 w-full px-4">
+            <label for="name"
+              class="text-base font-bold bg-gradient-to-r from-primary from-5% to-emerald-500 bg-clip-text text-transparent">Nama</label>
+            <input type="text" id="name"
+              class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+          </div>
+          <div class="mb-8 w-full px-4">
+            <label for="email"
+              class="text-base font-bold bg-gradient-to-r from-primary from-5% to-emerald-500 bg-clip-text text-transparent">Email</label>
+            <input type="email" id="email"
+              class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+          </div>
+          <div class="mb-8 w-full px-4">
+            <label for="message"
+              class="text-base font-bold bg-gradient-to-r from-primary from-5% to-emerald-500 bg-clip-text text-transparent">Pesan</label>
+            <textarea type="email" id="email"
+              class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+          </div>
+          <div class="w-full px-4">
+            <button
+              class="w-full rounded-full bg-gradient-to-r from-primary from-5% to-emerald-500 py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Kirim</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Contact Section End -->
+
+  <!-- Footer Start -->
+  <footer class="bg-dark pt-24 pb-12">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+          <h2 class="mb-5 text-4xl font-bold text-white">Aden Sahwaludin</h2>
+          <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
+          <p>sekha1211h@gmail.com</p>
+          <p>Jl. Raya Margamulya</p>
+          <p>Indramayu</p>
+        </div>
+        <div class="mb-12 w-full px-4 md:w-1/3">
+          <h3 class="mb-5 text-xl font-semibold text-white">Kategori Tulisan</h3>
+          <ul class="text-slate-300">
+            <li>
+              <a href="#" data-blog-id="1" class="mb-3 inline-block text-base hover:text-primary">Programming</a>
+            </li>
+            <li>
+              <a href="#" data-blog-id="1" class="mb-3 inline-block text-base hover:text-primary">Teknologi</a>
+            </li>
+            <li>
+              <a href="#" data-blog-id="1" class="mb-3 inline-block text-base hover:text-primary">Gaya Hidup</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-12 w-full px-4 md:w-1/3">
+          <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+          <ul class="text-slate-300">
+            <li>
+              <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Beranda</a>
+            </li>
+            <li>
+              <a href="#about" class="mb-3 inline-block text-base hover:text-primary">Tentang Saya</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary">Portfolio</a>
+            </li>
+            <li>
+              <a href="#clients" class="mb-3 inline-block text-base hover:text-primary">Clients</a>
+            </li>
+            <li>
+              <a href="#blog" class="mb-3 inline-block text-base hover:text-primary">Blog</a>
+            </li>
+            <li>
+              <a href="#contact" class="mb-3 inline-block text-base hover:text-primary">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="w-full border-t border-slate-700 pt-10">
+        <div class="mb-3 flex flex-wrap place-content-center">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/6281292596948" target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>WhatsApp</title>
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/_adeen.s" target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Instagram</title>
+              <path
+                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="https://twitter.com/AdenSahwaludin7" target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>Twitter</title>
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://tiktok.com/@A1270" target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>TikTok</title>
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/aden-sahwaludin-250875217/" target="_blank"
+            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-none hover:bg-gradient-to-r from-primary to-emerald-800 transition duration:300 hover:text-white focus:bg-gradient-to-r from-primary to-emerald-800 focus:border-none focus:outline-none">
+            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <title>LinkedIn</title>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+        <p class="text-center text-xs font-medium text-slate-500">
+          Dibuat dengan <span class="text-pink-500">❤️</span> oleh <a href="https://instagram.com/_aden.s"
+            target="_blank"
+            class="font-bold bg-gradient-to-r from-primary from-5% to-emerald-500 bg-clip-text text-transparent">Aden
+            Sahwaludin</a>, menggunakan
+          <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Back to top Start -->
+  <a href="#home"
+    class="fixed bottom-4 right-4 z-[999] hidden h-14 w-14 items-center justify-center rounded-full bg-gradient-to-t from-primary from-5% to-emerald-500 p-4 hover:animate-pulse transition duration-500 ease-in-out"
+    id="to-top">
+    <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+  </a>
+  <!-- Back to top End -->
+
+  <script src="dist/js/script.js"></script>
+</body>
+<script>
+  var audio = document.getElementById("song");
+
+  function playAudio() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+<script>
+  // Mengambil semua tautan dengan atribut data-blog-id
+  const alertLinks = document.querySelectorAll('[data-blog-id]');
+
+  // Menambahkan event listener untuk setiap tautan
+  alertLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // Mencegah navigasi ke tautan
+
+      const blogId = link.getAttribute('data-blog-id');
+
+      // Menampilkan pop-up alert Tailwind CSS dengan ID yang sesuai
+      const alertDiv = document.createElement('div');
+      alertDiv.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'z-50', 'flex', 'items-center', 'justify-center', 'h-screen', 'bg-opacity-50', 'bg-gray-800', 'text-center');
+      alertDiv.innerHTML = `
+      <div class="bg-dark rounded-lg px-4 py-3 text-primary font-bold text-sm text-center" role="alert">
+        <svg class="fill-current w-4 h-4 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/></svg>
+        <p>Maaf untuk sekarang link belum tersedia<!--${blogId}-->.</p>
+        <div class="mt-3 text-center">
+          <button class="px-4 py-2 text-sm font-semibold text-dark bg-primary rounded focus:outline-none focus:ring focus:ring-slate-500" id="closeAlert">Tutup</button>
+        </div>
+      </div>
+    `;
+
+      // Menambahkan pop-up alert ke dalam dokumen
+      document.body.appendChild(alertDiv);
+
+      // Menambahkan event listener untuk tombol tutup
+      const closeAlertButton = alertDiv.querySelector('#closeAlert');
+      closeAlertButton.addEventListener('click', function () {
+        alertDiv.remove(); // Menghapus pop-up alert ketika tombol tutup ditekan
+      });
+    });
+  });
+
+</script>
+
+</html>
