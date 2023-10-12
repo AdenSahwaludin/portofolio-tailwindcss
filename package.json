@@ -7,7 +7,8 @@
     "pertama": "npm init -y",
     "kedua": "npm i -D tailwindcss",
     "ketiga": "npx tailwindcss init",
-    "keempat": "npx tailwindcss -i ./src/input.css -o ./dist/css/final.css --watch"
+    "keempat": "npx tailwindcss -i ./src/input.css -o ./dist/css/final.css --watch",
+    "animasi": "npm install -D tailwindcss-animate"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,8 @@
   "devDependencies": {
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.8",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.7"
   },
   "repository": {
     "type": "git",
