@@ -15,6 +15,12 @@ module.exports = {
 			screens: {
 				"2xl": "1320px",
 			},
+			animation: {
+				wavingHand: "wavingHand 2s linear infinite",
+				"bounce-slow": "bounce 1.2s ease-out infinite",
+				"infinite-scroll": "infinite-scroll 25s linear infinite",
+				gradient: "gradient 2s linear infinite",
+			},
 			keyframes: {
 				wavingHand: {
 					"0%": { transform: "rotate(0deg) " },
@@ -26,10 +32,13 @@ module.exports = {
 					"60%": { transform: "rotate(0deg)" },
 					"100%": { transform: "rotate(0deg)" },
 				},
-			},
-			animation: {
-				wavingHand: "wavingHand 2s linear infinite",
-				"bounce-slow": "bounce 1.2s ease-out infinite",
+				"infinite-scroll": {
+					from: { transform: "translateX(0)" },
+					to: { transform: "translateX(-100%)" },
+				},
+				gradient: {
+					to: { "background-position": "200% center" },
+				},
 			},
 		},
 	},
