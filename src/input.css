@@ -10,7 +10,8 @@
 
 @layer components {
 	.styleSosmed {
-		@apply mr-3 mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-primary to-emerald-800 text-white  transition hover:scale-110 focus:scale-110 focus:from-transparent focus:to-transparent focus:text-primary focus:outline-none;
+		@apply flex h-10 w-10 items-center justify-center self-center rounded-full bg-gradient-to-tr from-primary to-emerald-800 text-white transition-all duration-300 hover:scale-110 focus:scale-110 focus:from-transparent focus:to-transparent focus:text-primary
+		focus:outline-none;
 	}
 
 	.judul {
@@ -27,7 +28,7 @@
 }
 
 .hamburger-active > span:nth-child(1) {
-	@apply scale-y-125 translate-x-2 translate-y-1 rotate-45 scale-[0.59];
+	@apply translate-x-2 translate-y-1 rotate-45 scale-[0.59] scale-y-125;
 }
 
 .hamburger-active > span:nth-child(2) {
@@ -35,7 +36,7 @@
 }
 
 .hamburger-active > span:nth-child(3) {
-	@apply scale-y-125 -translate-y-1 translate-x-2 -rotate-45 scale-[0.59];
+	@apply -translate-y-1 translate-x-2 -rotate-45 scale-[0.59] scale-y-125;
 }
 
 #dark-toggle:checked ~ label div.toggle-circle {
