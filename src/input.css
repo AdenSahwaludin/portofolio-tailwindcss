@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	font-family: "Inter", sans-serif;
+@layer base {
+	body {
+		font-family: "Inter", sans-serif;
+	}
 }
 
-@layer base {
-	* {
-		transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+@layer components {
+	.styleSosmed {
+		@apply mr-3 mt-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-primary to-emerald-800 text-white  transition hover:scale-110 focus:scale-110 focus:from-transparent focus:to-transparent focus:text-primary focus:outline-none;
+	}
+
+	.judul {
+		@apply mx-auto mb-2 flex max-w-fit bg-gradient-to-r from-emerald-800 to-primary bg-clip-text pb-2 text-3xl font-bold text-transparent sm:text-4xl lg:text-5xl;
 	}
 }
 .navbar-fixed {
@@ -21,17 +27,21 @@ body {
 }
 
 .hamburger-active > span:nth-child(1) {
-	@apply rotate-45;
+	@apply scale-y-125 translate-x-2 translate-y-1 rotate-45 scale-[0.59];
 }
 
 .hamburger-active > span:nth-child(2) {
-	@apply scale-0;
+	@apply translate-x-[6px] rotate-90 scale-0;
 }
 
 .hamburger-active > span:nth-child(3) {
-	@apply -rotate-45;
+	@apply scale-y-125 -translate-y-1 translate-x-2 -rotate-45 scale-[0.59];
 }
 
 #dark-toggle:checked ~ label div.toggle-circle {
 	@apply translate-x-3;
+}
+
+* {
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
