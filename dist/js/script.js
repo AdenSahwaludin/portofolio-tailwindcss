@@ -32,27 +32,47 @@ window.addEventListener("click", function (e) {
 	}
 });
 
-// Darkmode toggle
-const darkToggle = document.querySelector("#dark-toggle");
-const html = document.querySelector("html");
 
-darkToggle.addEventListener("click", function () {
-	if (darkToggle.checked) {
-		html.classList.add("dark");
-		localStorage.theme = "dark";
-	} else {
-		html.classList.remove("dark");
-		localStorage.theme = "light";
-	}
-});
+//darkmode
+var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
-// pindahkan posisi toggle sesuai mode
+// Change the icons inside the button based on previous settings
 if (
-	localStorage.theme === "dark" ||
-	(!("theme" in localStorage) &&
+	localStorage.getItem("color-theme") === "dark" ||
+	(!("color-theme" in localStorage) &&
 		window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
-	darkToggle.checked = true;
+	themeToggleLightIcon.classList.remove("hidden");
 } else {
-	darkToggle.checked = false;
+	themeToggleDarkIcon.classList.remove("hidden");
 }
+
+var themeToggleBtn = document.getElementById("theme-toggle");
+
+themeToggleBtn.addEventListener("click", function () {
+	// toggle icons inside button
+	themeToggleDarkIcon.classList.toggle("hidden");
+	themeToggleLightIcon.classList.toggle("hidden");
+
+	// if set via local storage previously
+	if (localStorage.getItem("color-theme")) {
+		if (localStorage.getItem("color-theme") === "light") {
+			document.documentElement.classList.add("dark");
+			localStorage.setItem("color-theme", "dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+			localStorage.setItem("color-theme", "light");
+		}
+
+		// if NOT set via local storage previously
+	} else {
+		if (document.documentElement.classList.contains("dark")) {
+			document.documentElement.classList.remove("dark");
+			localStorage.setItem("color-theme", "light");
+		} else {
+			document.documentElement.classList.add("dark");
+			localStorage.setItem("color-theme", "dark");
+		}
+	}
+});
