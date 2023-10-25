@@ -8,6 +8,7 @@
   <title>Portfolio Tailwind CSS</title>
   <link rel="icon" href="image.png" type="image/x-icon">
   <link href="dist/css/final.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/aos.css">
   <!-- Dark mode -->
   <script>
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -90,14 +91,14 @@
 
     <!-- Illustration #2 -->
     <div
-      class="absolute top-0 -translate-y-1/2 translate-x-1 sm:translate-x-1/2 rotate-12 blur-3xl opacity-50 pointer-events-none"
+      class="absolute top-0 -translate-y-1/2 translate-x-5 sm:translate-x-1/2 rotate-12 blur-3xl opacity-50 pointer-events-none"
       aria-hidden="true">
       <img src="./dist/img/shape.svg" class="max-w-none" width="852" height="582" alt="Illustration" />
     </div>
 
     <!-- Illustration #4 -->
     <div
-      class="absolute blur-3xl rotate-12 scale-90 translate-y-60 -translate-x-52 opacity-50 pointer-events-none lg:top-0 lg:left-0 lg:-translate-x-80 lg:-translate-y-52"
+      class="absolute blur-3xl rotate-12 scale-90 translate-y-64 -translate-x-52 opacity-50 pointer-events-none lg:top-0 lg:left-0 lg:-translate-x-80 lg:-translate-y-52"
       aria-hidden="true">
       <img src="./dist/img/shapeJoin.png" class="max-w-none" width="852" height="582" alt="Illustration" />
     </div>
@@ -110,7 +111,9 @@
     <section id="home" class="md:pt-28 lg:pt-12 pt-24 ">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+            data-aos-anchor-placement="top-center">
             <h1
               class="flex max-w-fit text-base z-10 font-semibold bg-gradient-to-r from-primary from-5% to-emerald-400  text-transparent bg-clip-text md:text-xl">
               Halo Semua <span class="text-white animate-wavingHand">👋</span>,
@@ -778,6 +781,10 @@
   </a>
   <!-- Back to top End -->
 
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="dist/js/script.js"></script>
   <script src="./dist/js/particle-animation.js"></script>
 </body>

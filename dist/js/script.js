@@ -32,7 +32,6 @@ window.addEventListener("click", function (e) {
 	}
 });
 
-
 //darkmode
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
