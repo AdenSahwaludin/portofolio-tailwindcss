@@ -8,7 +8,9 @@
   <title>Portfolio Tailwind CSS</title>
   <link rel="icon" href="image.png" type="image/x-icon">
   <link href="dist/css/final.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <script defer src="https://cdn.jsdelivr.netnpm/alpinejs@3.13.1/dist/cdn.min.js" ></script>
+  <script>document.documentElement.classList.add('js')</script>
   <!-- Dark mode -->
   <script>
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -17,7 +19,7 @@
       document.documentElement.classList.remove('dark')
     }
   </script>
-  <script defer src="https://cdn.jsdelivr.netnpm/alpinejs@3.13.1/dist/cdn.min.js"></script>
+
 </head>
 
 
@@ -87,16 +89,14 @@
 
   <!-- Hero Section Start -->
   <main class="relative min-h-screen flex flex-col bg-slate-900 overflow-hidden">
-
-
-    <!-- Illustration #2 -->
+    <!-- Illustration #1 -->
     <div
       class="absolute top-0 -translate-y-1/2 translate-x-5 sm:translate-x-1/2 rotate-12 blur-3xl opacity-50 pointer-events-none"
       aria-hidden="true">
       <img src="./dist/img/shape.svg" class="max-w-none" width="852" height="582" alt="Illustration" />
     </div>
 
-    <!-- Illustration #4 -->
+    <!-- Illustration #2 -->
     <div
       class="absolute blur-3xl rotate-12 scale-90 translate-y-64 -translate-x-52 opacity-50 pointer-events-none lg:top-0 lg:left-0 lg:-translate-x-80 lg:-translate-y-52"
       aria-hidden="true">
@@ -111,9 +111,7 @@
     <section id="home" class="md:pt-28 lg:pt-12 pt-24 ">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50"
-            data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-            data-aos-anchor-placement="top-center">
+          <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right">
             <h1
               class="flex max-w-fit text-base z-10 font-semibold bg-gradient-to-r from-primary from-5% to-emerald-400  text-transparent bg-clip-text md:text-xl">
               Halo Semua <span class="text-white animate-wavingHand">👋</span>,
@@ -140,7 +138,7 @@
               class="rounded-full bg-gradient-to-r from-primary from-5% to-emerald-500 to-90% py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg z-10">Hubungi
               Saya</a>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="w-full self-end px-4 lg:w-1/2" data-aos="fade-left">
             <div class="flex lg:right-0 lg:mt-12 mt-6">
               <img src="dist/img/svgbndung.png" alt="Aden Sahwaludin" class="flex z-10 mx-auto max-w-full" />
             </div>
@@ -155,7 +153,7 @@
   <section id="about" class="pt-36 pb-32 dark:bg-dark">
     <div class="container flex">
       <div class="flex flex-wrap">
-        <div class="mb-10 w-full px-4 lg:w-1/2 ">
+        <div class="mb-10 w-full px-4 lg:w-1/2" data-aos="fade-down">
           <h4
             class="mb-3 text-lg font-bold uppercase bg-gradient-to-r from-primary from-5% to-emerald-500 to-90% bg-clip-text text-transparent">
             Tentang Saya</h4>
@@ -166,7 +164,7 @@
           <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Saya sangat antusias dalam mempelajari
             teknologi dan informatika, dan selalu bersemangat untuk mengejar pengetahuan baru.</p>
         </div>
-        <div class="w-full px-4 lg:w-1/2">
+        <div class="w-full px-4 lg:w-1/2" data-aos="fade-up">
           <h3 class="mb-2 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Mari berteman</h3>
           <p class="text-base font-medium text-secondary lg:text-lg mb-3">
             Anda bisa mengikuti perkembangan saya dan berinteraksi dengan saya melalui berbagai platform media sosial
@@ -780,10 +778,19 @@
     <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
   </a>
   <!-- Back to top End -->
-
-  <script src="js/aos.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    document.addEventListener('aos:in', ({ detail }) => {
+      console.log('animated in', detail);
+    });
+
+    document.addEventListener('aos:out', ({ detail }) => {
+      console.log('animated out', detail);
+    });
+    AOS.init({
+      duration: 1200,
+      mirror: true,
+    })
   </script>
   <script src="dist/js/script.js"></script>
   <script src="./dist/js/particle-animation.js"></script>
