@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -436,6 +436,7 @@ video {
 
 body {
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 *, ::before, ::after {

@@ -8,8 +8,8 @@
   <title>Portfolio Tailwind CSS</title>
   <link rel="icon" href="image.png" type="image/x-icon">
   <link href="dist/css/final.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-  <script defer src="https://cdn.jsdelivr.netnpm/alpinejs@3.13.1/dist/cdn.min.js" ></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script defer src="https://cdn.jsdelivr.netnpm/alpinejs@3.13.1/dist/cdn.min.js"></script>
   <script>document.documentElement.classList.add('js')</script>
   <!-- Dark mode -->
   <script>
@@ -225,7 +225,7 @@
   <!-- Portfolio Section Start -->
   <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
     <div class="container">
-      <div class="w-full px-4">
+      <div class="w-full px-4" data-aos="fade-up">
         <div class="mx-auto mb-16 max-w-xl text-center">
           <h2 class="judul">
             Portfolio</h2>
@@ -237,7 +237,7 @@
       </div>
 
       <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-        <div class="mb-12 p-4 md:w-1/2">
+        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-right">
           <div class="overflow-hidden rounded-md shadow-md">
             <img src="dist/img/portfolio/1.png" alt="Landing Page" width="w-full" />
           </div>
@@ -246,7 +246,7 @@
           <p class="text-base font-medium text-secondary">Kami telah merancang dan mengembangkan halaman utama yang
             menarik dan responsif. Lihat lebih lanjut tentang proyek ini.</p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
+        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-left">
           <div class="overflow-hidden rounded-md shadow-md">
             <img src="dist/img/portfolio/2.png" alt="Wedding Invitation" width="w-full" />
           </div>
@@ -255,7 +255,7 @@
           <p class="text-base font-medium text-secondary">Proyek undangan pernikahan kami menghadirkan desain yang
             elegan dan kreatif. Temukan lebih lanjut tentang proyek ini.</p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
+        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-right">
           <div class="overflow-hidden rounded-md shadow-md">
             <img src="dist/img/portfolio/3.png" alt="Portfolio" width="w-full" />
           </div>
@@ -264,7 +264,7 @@
           <p class="text-base font-medium text-secondary">Kami telah membuat portofolio menggunakan Tailwind CSS yang
             modern dan menarik. Pelajari lebih lanjut tentang proyek ini.</p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
+        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-left">
           <div class="overflow-hidden rounded-md shadow-md">
             <img src="dist/img/portfolio/4.png" alt="Tribute Page" width="w-full" />
           </div>
@@ -284,7 +284,7 @@
   <!-- Skills Section Start -->
   <section id="skills" class="bg-slate-800 py-28 dark:bg-slate-300">
     <div class="container">
-      <div class="w-full px-4">
+      <div class="w-full px-4" data-aos="fade-up" data-aos-offset="50">
         <div class="mx-auto mb-16 text-center">
           <h2
             class="flex mx-auto max-w-fit bg-gradient-to-r from-primary from-5% to-emerald-700 bg-clip-text mb-4 text-3xl font-bold text-transparent sm:text-4xl lg:text-5xl">
@@ -296,7 +296,8 @@
 
       <div class="flex flex-wrap place-content-center max-w-md sm:max-w-lg mx-auto space-x-4 ">
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="100">
           <svg role="img" class="fill-[#E34F26] h-5 w-5 mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>HTML5</title>
             <path
@@ -305,7 +306,8 @@
           <p class="text-slate-400 dark:text-slate-600">HTML</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="200">
           <svg role="img" class="fill-[#1572B6] h-5 w-5 mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>CSS3</title>
             <path
@@ -314,7 +316,8 @@
           <p class="text-slate-400 dark:text-slate-600">CSS</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="300">
           <svg role="img" viewBox="0 0 24 24" class="fill-[#181717] h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <title>GitHub</title>
             <path
@@ -323,7 +326,8 @@
           <p class="text-slate-400 dark:text-slate-600">GitHub</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="400">
           <svg role="img" viewBox="0 0 24 24" class="fill-[#CC6699] h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <title>Sass</title>
             <path
@@ -332,7 +336,8 @@
           <p class="text-slate-400 dark:text-slate-600">SASS</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="500">
           <svg viewBox="-118.513 4.399 540.906 540.906" class=" h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg"
             fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -364,7 +369,8 @@
           <p class="text-slate-400 dark:text-slate-600">Java</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="600">
           <svg role="img" viewBox="0 0 24 24" class="fill-[#4479A1] h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <title>MySQL</title>
             <path
@@ -373,7 +379,8 @@
           <p class="text-slate-400 dark:text-slate-600">MySQL</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="700">
           <svg role="img" viewBox="0 0 24 24" class="fill-[#5A0EF8] h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <title>DaisyUI</title>
             <path
@@ -382,7 +389,8 @@
           <p class="text-slate-400 dark:text-slate-600">DaisyUI</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="800">
           <svg role="img" viewBox="0 0 24 24" class="fill-[#7952B3] h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <title>Bootstrap</title>
             <path
@@ -391,7 +399,8 @@
           <p class="text-slate-400 dark:text-slate-600">Bootstrap</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="900">
           <svg role="img" viewBox="0 0 24 24" class="fill-[#06B6D4] h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <title>Tailwind CSS</title>
             <path
@@ -400,7 +409,8 @@
           <p class="text-slate-400 dark:text-slate-600">TailwindCSS</p>
         </div>
         <div
-          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center">
+          class="flex dark:from-white my-4 px-4 py-2 rounded-full bg-gradient-to-r from-slate-700 from-5% to-transparent to-100% shadow-lg items-center justify-center"
+          data-aos="fade-down" data-aos-delay="1000">
           <svg role="img" class="fill-[#F7DF1E] h-5 w-5 mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>JavaScript</title>
             <path
@@ -418,7 +428,7 @@
   <!-- Blog Section Start -->
   <section id="blog" class="bg-slate-100 pt-36 pb-32 dark:bg-dark">
     <div class="container">
-      <div class="w-full px-4">
+      <div class="w-full px-4" data-aos="fade-up">
         <div class="mx-auto mb-16 max-w-xl text-center">
           <h2 class="judul
             ">
@@ -428,7 +438,7 @@
       </div>
 
       <div class="flex flex-wrap place-content-center">
-        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-down" data-aos-delay="100">
           <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
             <img src="./dist/img/blog/FundamentalWebsite.png" alt="Programming"
               class="w-full blur-[1px] hover:blur-none transition hover:scale-105 duration-500" />
@@ -446,7 +456,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-down" data-aos-delay="300">
           <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
             <img src="https://source.unsplash.com/360x200?Mechanical+Keyboard" alt="Mechanical Keyboard"
               class="w-full" />
@@ -464,8 +474,8 @@
                 Selengkapnya</a>
             </div>
           </div>
-        </div> -->
-        <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+        </div>
+        <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="fade-down" data-aos-delay="500">
           <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
             <img src="dist/img/blog/medium.com.png" alt="Medium.com"
               class="w-full blur-[1px] hover:blur-none transition hover:scale-105 duration-500" />
@@ -788,9 +798,11 @@
       console.log('animated out', detail);
     });
     AOS.init({
-      duration: 1200,
+      duration: 1000,
       mirror: true,
+      offset: 100,
     })
+
   </script>
   <script src="dist/js/script.js"></script>
   <script src="./dist/js/particle-animation.js"></script>
