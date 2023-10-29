@@ -1,10 +1,9 @@
 # Portfolio Tailwind CSS
+![image](https://github.com/AdenSahwaludin/portofolio-tailwindcss/assets/121280990/14d0a713-b9e3-4171-8fe0-b357d2be6d88)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AdenSahwaludin/portofolio-tailwindcss)
 ![GitHub repo size](https://img.shields.io/github/repo-size/AdenSahwaludin/portofolio-tailwindcss)
 ![GitHub](https://img.shields.io/github/license/AdenSahwaludin/portofolio-tailwindcss)
-
-![Portfolio Preview](dist/img/portfolio-preview.png)
 
 ## Deskripsi Proyek
 
