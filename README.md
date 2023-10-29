@@ -1,5 +1,5 @@
 # Portfolio Tailwind CSS
-![image](https://github.com/AdenSahwaludin/portofolio-tailwindcss/assets/121280990/14d0a713-b9e3-4171-8fe0-b357d2be6d88)
+<img width="945" style="display: flex; justify-content: center; align-items: center;" alt="image" src="https://github.com/AdenSahwaludin/portofolio-tailwindcss/assets/121280990/7c0d41a3-8976-4a29-bb3d-023ef4d0b860">
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/AdenSahwaludin/portofolio-tailwindcss)
 ![GitHub repo size](https://img.shields.io/github/repo-size/AdenSahwaludin/portofolio-tailwindcss)
